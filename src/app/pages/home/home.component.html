@@ -1,0 +1,9 @@
+<div class="container-fluid">
+    <div class="row">
+        <div *ngFor="let movie of dataMovies"  class="col-md-2 col-movie-poster">
+            <a [routerLink]="['/movie', movie.url]">
+                <img [src]="'/assets/sw_poster_e' + movie.episode_id + '.jpg'" alt="">
+            </a>
+        </div>
+    </div>1
+</div>

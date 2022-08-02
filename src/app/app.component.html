@@ -1,0 +1,12 @@
+<div class="starwars-demo">
+    <img src="/assets/star.svg" alt="Star" id="star" class="star">
+    <img src="/assets/wars.svg" alt="Wars" id="wars" class="wars">
+</div>
+<div class="page-separator"></div>
+<router-outlet></router-outlet>
+<a [routerLink]="['/home']" class="float-home-button button-home" title="Home Page">
+    <i class="fa fa-home"></i>
+</a>
+<a [routerLink]="['/characters']" class="float-home-button button-characters" title="All Characters">
+    <i class="fa fa-user"></i>
+</a>

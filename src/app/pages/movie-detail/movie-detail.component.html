@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Episode {{movieEpisode}}: {{movieTitle}}</h2>
+            <p class="movie_details">Director: {{movieDirector}}</p>
+            <a [routerLink]="['/characters']" [queryParams]="{film: movieId}" class="btn btn-sw">Film Characters</a>
+            <audio id="hidden_audio" src="/assets/sw_oc.mp3" preload="auto" muted autoplay></audio>
+        </div>
+    </div>
+    <div class="row" id="sw-content">
+        <div class="col-md-12">
+            <div id="sw_text" class="intro">
+                A long time ago, in a galaxy far,<br>far away...
+            </div>
+            <div id="sw_logo" class="logo">
+                <img src="/assets/logo.svg" alt="">
+            </div>
+            <div id="board">
+                <div id="content">
+                  <p id="title">Episode {{movieEpisode}}</p>
+                  <p id="subtitle">{{movieTitle | uppercase}}</p>
+                  <br>                  
+                  <p>{{movieCrawlText}}</p>                  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

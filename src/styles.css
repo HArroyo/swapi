@@ -1,0 +1,331 @@
+.star {
+    animation: star 10s ease-out infinite;
+}
+
+.wars {
+    animation: wars 10s ease-out infinite;
+}
+
+@keyframes star {
+    0% {
+        opacity: 0;
+        transform: scale(1.5) translateY(-0.75em);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    89% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateZ(-1000em);
+    }
+}
+
+@keyframes wars {
+    0% {
+        opacity: 0;
+        transform: scale(1.5) translateY(0.5em);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateZ(-1000em);
+    }
+}
+
+.starwars-demo {
+    perspective: 800px;
+    transform-style: preserve3d;
+}
+
+body {
+    background: #000 url(/assets/bg.jpg);
+    font-family: 'Lato';
+    overflow: hidden;
+}
+
+.page-separator{
+    width: 100%;
+    height: 2px;
+    background-color: #FDF253;    
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.float-home-button{
+    border-radius: 50%;
+    border: 2px solid #FDF253;
+    color: #FDF253 !important;
+    font-size: 30px;
+    background-color: #000;
+    position: absolute;
+}
+
+.float-home-button.button-home{
+    bottom: 40px;
+    right: 120px;
+    padding: 5px 13px;
+}
+
+.float-home-button.button-characters{
+    bottom: 40px;
+    right: 40px;
+    padding: 5px 17px;
+}
+
+.starwars-demo {
+    width: 20em;
+    height: 10em;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+img {
+    width: 100%;
+}
+
+.star, .wars{
+    position: absolute;
+}
+
+.star {
+    top: -0.75em;
+}
+
+.wars {
+    bottom: -0.5em;
+}
+
+#sw-content{
+    margin-top: 20px;
+}
+
+h1, h2, h3, h4, p{
+    color:#FDF253;
+}
+
+.btn-sw{
+    background-color: #000;
+    border-color: #FDF253;
+    color: #FDF253;
+}
+
+.btn-sw-fw{
+    width: 100%;
+}
+
+.btn-sw:hover{
+    background-color: #FDF253;
+    color: #000;
+    border-color: #FDF253;
+}
+
+.intro{
+    animation: intro 6s ease-out 1s;
+    margin: 0 auto;
+    color: rgb(75, 213, 238) !important;
+    font-weight: 400;
+    font-size: 20px;
+    width: 15em;
+    opacity: 0;
+}    
+
+@keyframes intro{
+    0%{
+        opacity: 0;
+    }
+        
+    20%{
+        opacity: 1;
+    }
+        
+    90%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+.logo{
+    width: 50%;
+    animation: logo 9s ease-out 9s;
+    margin: 0 auto;
+    opacity: 0;
+}
+
+.logo svg{
+    width: inherit;
+}        
+
+
+@keyframes logo{
+    0%{
+        width: 18em;
+        margin: (- 18em / 2) 0 0 (- 18em / 2);
+        transform: scale(2.75);
+        opacity: 1;
+    }
+        
+    50%{
+        opacity: 1;
+        width: 18em;
+        margin: (- 18em / 2) 0 0 (- 18em / 2);
+    }
+        
+    100%{
+        opacity: 0;
+        transform: scale(0.1);
+        width: 18em;
+        margin: (- 18em / 2) 0 0 (- 18em / 2);
+    }
+}
+
+#board p{
+    color: #FFFF82;
+}
+
+p.movie_details{
+    margin-bottom: 5px;
+}
+
+#board{
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    transform: perspective(300px) rotateX(25deg);
+    transform-origin: 50% 100%;
+    text-align: justify;
+    position: absolute;    
+    font-weight: bold;
+    overflow: hidden;
+    font-size: 20px;
+    height: 50em;
+    width: 18em;
+    bottom: 0;
+    left: 35%;
+}
+  
+#board:after{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, transparent 100%);
+    pointer-events: none;
+    position: absolute;
+    content: ' ';
+    bottom: 60%;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+#content{
+    animation: scroll 100s linear 16s;
+    position: absolute;
+    top: 100%;
+}
+
+#title, #subtitle{
+    text-align: center;
+}
+  
+
+@keyframes scroll{
+    0%{
+        top: 100%
+    }
+        
+    100%{
+        top: -170%
+    }
+}    
+
+#hidden_audio{
+    display: none;
+}
+
+.sw_filter select{
+    background-color: #000;
+    color: #FDF253 !important;
+    border-color: #FDF253;
+}
+
+.sw_filter select option{
+    background-color: #000 !important;
+    color: #FDF253 !important;
+}
+
+.sw-filter-result{
+    margin-top: 20px;
+}
+
+.sw-filter-result p a{
+    color: #FDF253;
+    text-decoration: none;
+}
+
+.characters-pagination{
+    margin-top: 20px;
+}
+
+.characters-pagination li a{
+    background-color: #000;
+    border: 1px solid #FDF253;
+    color: #FDF253;
+    cursor: pointer;
+}
+
+.characters-pagination li a:hover, .characters-pagination li.active a{
+    background-color: #FDF253;
+    border: 1px solid #FDF253;
+    color: #000;
+}
+
+.characters-pagination li.disabled a{
+    background-color: #aeaeae;
+    border: 1px solid #FDF253;
+    color: #FDF253;
+}
+
+@media (max-width: 768px) {
+    body{
+        overflow: auto;
+    }
+
+    .float-home-button{
+        position: fixed;
+    }
+
+    .col-movie-poster{
+        margin-bottom: 20px;
+    }
+
+    #board{
+        left: 15%;
+        top: -40%;
+    }
+}
+
+@media (max-width: 600px) {
+    .starwars-demo {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .starwars-demo {
+        font-size: 7px;
+    }
+}

@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row sw_filter">
+        <div class="col-md-3">
+            <select [(ngModel)]="filterFilm" class="form-control">
+                <option value="">Select a Film</option>
+                <option value="1">A New Hope</option>
+                <option value="2">The Empire Strikes Back</option>
+                <option value="3">Return of the Jedi</option>
+                <option value="4">The Phantom Menace</option>
+                <option value="5">Attack of the Clones</option>
+                <option value="6">Revenge of the Sith</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <select [(ngModel)]="filterGender" class="form-control">
+                <option value="">Select a Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Unknown">Unknown</option>
+                <option value="N/A">N/A</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <select [(ngModel)]="filterEyeColor" class="form-control">
+                <option value="">Select an Eye Color</option>
+                <option value="Green">Green</option>
+                <option value="Brown">Brown</option>
+                <option value="Black">Black</option>
+                <option value="Yellow">Yellow</option>
+                <option value="White">White</option>
+                <option value="Purple">Purple</option>
+                <option value="Red">Red</option>
+                <option value="Blue">Blue</option>
+                <option value="Grey">Grey</option>
+                <option value="Unknown">Unknown</option>
+                <option value="N/A">N/A</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <a (click)="filterMovieAction()" class="btn btn-sw btn-sw-fw">Buscar</a>
+        </div>
+    </div>
+    <div class="row sw-filter-result">
+        <div *ngFor="let char of dataCharacters" class="col-md-2">
+            <p><a [routerLink]="['/characters', char.char_id]">- {{char.name}}</a></p>
+        </div>
+    </div>
+    <nav class="characters-pagination">
+        <ul id="swapi-paginator" class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link" (click)="previousPage()">Previous</a>
+            </li>
+            <li *ngFor="let item of createRange(totNumPages); let page = index" class="page-item page-{{page + 1}}"><a class="page-link" (click)="changePage(page + 1)">{{page + 1}}</a></li>
+            <li class="page-item">
+                <a class="page-link" (click)="nextPage()">Next</a>
+            </li>
+        </ul>
+    </nav>
+</div>
